@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = styled.nav`
 display: flex;
-padding: 1.5rem;
+padding: 1.5rem 6.5rem;
 align-items: center;
 justify-content: space-between;
 background-color: #202020;
@@ -22,7 +22,7 @@ color: white;
 margin: 0 1rem;
 text-decoration: none;
 &:hover {
-  color: #264653;
+  color: #f78f3f;
 }`;
 
 const NavBar = () => (
