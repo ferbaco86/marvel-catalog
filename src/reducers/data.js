@@ -6,7 +6,7 @@ const initialState = {
   error: null,
 };
 
-const dataReducer = (state = initialState, action) => {
+export const dataReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA_PENDING:
       return {
@@ -30,4 +30,8 @@ const dataReducer = (state = initialState, action) => {
   }
 };
 
-export default dataReducer;
+export const getData = state => state.data;
+
+export const getDataPending = state => state.pending;
+
+export const getDataError = state => state.error;
