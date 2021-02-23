@@ -10,8 +10,8 @@ const fetchData = () => dispatch => {
   fetch(apiUrl, config)
     .then(response => response.json())
     .then(response => {
-      if (response.error) {
-        throw (response.error);
+      if (response.code !== 200) {
+        throw (response.status);
       }
       dispatch(fetchDataSuccess(response.data.results));
     })

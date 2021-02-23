@@ -5,6 +5,8 @@ import HeroCard from '../components/HeroCard';
 import NavBar from '../components/NavBar';
 import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
+import Button from '../components/Button';
+import ErrorMessage from '../components/ErrorMessage';
 
 const CardsContainer = styled.div`
 display: flex;
@@ -13,7 +15,7 @@ padding: 2rem 6.5rem;
 `;
 
 const Catalog = () => {
-  const { data, pending, error } = useSelector(state => state);
+  const { data } = useSelector(state => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,7 +24,7 @@ const Catalog = () => {
 
   const shouldComponentRender = () => {
     let isPending = false;
-    if (pending === false) {
+    if (data.pending === false || data.error !== null) {
       isPending = false;
     } else {
       isPending = true;
@@ -32,13 +34,16 @@ const Catalog = () => {
 
   const charInfo = data.data;
 
-  if (!shouldComponentRender()) return <LoaderSpinner />;
+  if (shouldComponentRender()) return <LoaderSpinner />;
+  const errorText = `API Error: ${data.error}`;
 
   return (
     <>
       <NavBar />
       <CardsContainer>
-        {error && <span>{error}</span>}
+        {data.error && (
+        <ErrorMessage message={errorText} />
+        )}
         {charInfo.map(char => (
           <HeroCard
             key={char.id}
@@ -48,6 +53,7 @@ const Catalog = () => {
           />
         ))}
       </CardsContainer>
+      <Button name="Next" />
     </>
   );
 };
