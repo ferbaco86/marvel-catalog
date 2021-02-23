@@ -18,18 +18,18 @@ const SubTitle = styled.p`
 color: white;`;
 
 const HeroCard = props => {
-  const { data } = props;
+  const { name } = props;
   return (
     <Card>
       <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/b5/5e/b55e722726cb6ea617fb3d2511f0dcd5.jpg" alt="Spider-Man Portrait" />
-      <Title>{data}</Title>
+      <Title>{name}</Title>
       <SubTitle>Peter Parker</SubTitle>
     </Card>
   );
 };
 
 HeroCard.propTypes = {
-  data: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default HeroCard;

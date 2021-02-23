@@ -30,6 +30,8 @@ const Catalog = () => {
     return isPending;
   };
 
+  const charInfo = data.data;
+
   if (!shouldComponentRender()) return <LoaderSpinner />;
 
   return (
@@ -37,7 +39,7 @@ const Catalog = () => {
       <NavBar />
       <CardsContainer>
         {error && <span>{error}</span>}
-        <HeroCard data={data.pending} />
+        {charInfo.map(char => <HeroCard key={char.id} name={char.name} />)}
       </CardsContainer>
     </>
   );
