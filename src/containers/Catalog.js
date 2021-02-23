@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import HeroCard from './HeroCard';
-import NavBar from './NavBar';
+import HeroCard from '../components/HeroCard';
+import NavBar from '../components/NavBar';
 import fetchData from '../api/fetchData';
-import LoaderSpinner from './LoaderSpinner';
+import LoaderSpinner from '../components/LoaderSpinner';
 
 const CardsContainer = styled.div`
 display: flex;
@@ -39,7 +39,14 @@ const Catalog = () => {
       <NavBar />
       <CardsContainer>
         {error && <span>{error}</span>}
-        {charInfo.map(char => <HeroCard key={char.id} name={char.name} />)}
+        {charInfo.map(char => (
+          <HeroCard
+            key={char.id}
+            name={char.name}
+            image={char.thumbnail.path}
+            extension={char.thumbnail.extension}
+          />
+        ))}
       </CardsContainer>
     </>
   );
