@@ -14,6 +14,7 @@ margin: 2rem;`;
 
 const Title = styled.h1`
 color: white;
+padding: 1rem;
 font-family: 'Roboto Condensed', sans-serif;
 font-weight: 700;
 text-align: center;`;
