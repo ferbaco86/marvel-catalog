@@ -6,7 +6,6 @@ import Pagination from '../components/Pagination';
 import NavBar from '../components/NavBar';
 import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
-// import Button from '../components/Button';
 import ErrorMessage from '../components/ErrorMessage';
 import { incrementOffset } from '../actions/index';
 
@@ -14,6 +13,29 @@ const CardsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 padding: 2rem 6.5rem;
+`;
+
+const SearchBarContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+margin-top: 1.5rem`;
+
+const SearchBar = styled.input`
+padding: 0.5rem 1rem 0 1rem;
+width: 50%;
+font-family: 'Roboto Condensed', sans-serif;
+font-size: 1.5rem;
+border: none;
+border-bottom: 3px solid black;
+::placeholder,
+::-webkit-input-placeholder {
+  color: lightgray;
+}
+:-ms-input-placeholder {
+   color: lightgray;
+}
 `;
 
 const Catalog = () => {
@@ -55,6 +77,9 @@ const Catalog = () => {
   return (
     <>
       <NavBar />
+      <SearchBarContainer>
+        <SearchBar type="text" placeholder="SEARCH" />
+      </SearchBarContainer>
       <CardsContainer>
         {data.error && (
         <ErrorMessage message={errorText} />
