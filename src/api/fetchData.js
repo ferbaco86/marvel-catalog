@@ -1,11 +1,14 @@
 import { fetchDataPending, fetchDataSuccess, fetchDataError } from '../actions/index';
+// import store from '../reducers/index';
 
-const apiUrl = '';
 const config = {
   mode: 'cors',
   method: 'GET',
 };
+
 const fetchData = () => dispatch => {
+  // const { offset } = store.getState().offset;
+  const apiUrl = '';
   dispatch(fetchDataPending());
   fetch(apiUrl, config)
     .then(response => response.json())

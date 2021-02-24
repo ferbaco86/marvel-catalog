@@ -13,8 +13,8 @@ width:${props => (props.isWide ? '50%' : '25%')}`;
 
 const Button = props => {
   const { name, wide, color } = props;
-  const handleClick = buttonName => {
-    props.clickHandler(buttonName);
+  const handleClick = () => {
+    props.clickHandler();
   };
 
   return (

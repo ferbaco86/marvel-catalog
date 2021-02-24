@@ -7,6 +7,7 @@ const initialState = {
 };
 
 const dataReducer = (state = initialState, action) => {
+  const chars = state.data;
   switch (action.type) {
     case FETCH_DATA_PENDING:
       return {
@@ -14,10 +15,11 @@ const dataReducer = (state = initialState, action) => {
         pending: true,
       };
     case FETCH_DATA_SUCCESS:
+      action.data.map(char => chars.push(char));
       return {
         ...state,
         pending: false,
-        data: action.data,
+        data: chars,
       };
     case FETCH_DATA_ERROR:
       return {

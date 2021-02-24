@@ -7,6 +7,7 @@ import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
 import Button from '../components/Button';
 import ErrorMessage from '../components/ErrorMessage';
+import { incrementOffset } from '../actions/index';
 
 const CardsContainer = styled.div`
 display: flex;
@@ -15,12 +16,17 @@ padding: 2rem 6.5rem;
 `;
 
 const Catalog = () => {
-  const { data } = useSelector(state => state);
+  const { data, offset } = useSelector(state => state);
   const dispatch = useDispatch();
+
+  const increaseOffset = () => {
+    if (offset.offset < 1500) dispatch(incrementOffset(100));
+  };
 
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+    increaseOffset();
+  }, [offset]);
 
   const shouldComponentRender = () => {
     let isPending = false;
@@ -36,7 +42,6 @@ const Catalog = () => {
 
   if (shouldComponentRender()) return <LoaderSpinner />;
   const errorText = `API Error: ${data.error}`;
-
   return (
     <>
       <NavBar />
@@ -53,7 +58,8 @@ const Catalog = () => {
           />
         ))}
       </CardsContainer>
-      <Button name="Next" />
+      {offset.offset < 1500 && (
+      <Button name="Next" />)}
     </>
   );
 };
