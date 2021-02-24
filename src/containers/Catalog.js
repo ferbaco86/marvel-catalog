@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import HeroCard from '../components/HeroCard';
+import Pagination from '../components/Pagination';
 import NavBar from '../components/NavBar';
 import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
-import Button from '../components/Button';
+// import Button from '../components/Button';
 import ErrorMessage from '../components/ErrorMessage';
 import { incrementOffset } from '../actions/index';
 
@@ -17,6 +18,8 @@ padding: 2rem 6.5rem;
 
 const Catalog = () => {
   const { data, offset } = useSelector(state => state);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [charsPerPage] = useState(56);
   const dispatch = useDispatch();
 
   const increaseOffset = () => {
@@ -39,6 +42,13 @@ const Catalog = () => {
   };
 
   const charInfo = data.data;
+  const indexOfLastChar = currentPage * charsPerPage;
+  const indexOfFirstChar = indexOfLastChar - charsPerPage;
+  const currentChars = charInfo.slice(indexOfFirstChar, indexOfLastChar);
+
+  const paginate = pageNumber => {
+    setCurrentPage(pageNumber);
+  };
 
   if (shouldComponentRender()) return <LoaderSpinner />;
   const errorText = `API Error: ${data.error}`;
@@ -49,7 +59,7 @@ const Catalog = () => {
         {data.error && (
         <ErrorMessage message={errorText} />
         )}
-        {charInfo.map(char => (
+        {currentChars.map(char => (
           <HeroCard
             key={char.id}
             name={char.name}
@@ -58,8 +68,9 @@ const Catalog = () => {
           />
         ))}
       </CardsContainer>
-      {offset.offset < 1500 && (
-      <Button name="Next" />)}
+      <Pagination charsPerPage={charsPerPage} totalChars={charInfo.length} paginate={paginate} />
+      {/* {offset.offset < 1500 && (
+      <Button name="Next" />)} */}
     </>
   );
 };
