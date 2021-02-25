@@ -128,6 +128,7 @@ const Catalog = () => {
                 {filteredChars.map(char => (
                   <HeroCard
                     key={char.id}
+                    id={char.id}
                     name={char.name}
                     image={char.thumbnail.path}
                     extension={char.thumbnail.extension}
@@ -144,6 +145,7 @@ const Catalog = () => {
         {currentChars.map(char => (
           <HeroCard
             key={char.id}
+            id={char.id}
             name={char.name}
             image={char.thumbnail.path}
             extension={char.thumbnail.extension}

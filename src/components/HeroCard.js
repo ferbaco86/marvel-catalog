@@ -30,17 +30,21 @@ border-bottom: 3px solid #ec1d24;
 
 const HeroCard = props => {
   const {
-    name, image, extension,
+    id, name, image, extension,
   } = props;
+
   return (
     <Card>
-      <Pic src={`${image}/${imageSize}.${extension}`} alt={`${name} Portrait`} />
-      <Title>{name}</Title>
+      <a href={`/character/${id}`}>
+        <Pic src={`${image}/${imageSize}.${extension}`} alt={`${name} Portrait`} />
+        <Title>{name}</Title>
+      </a>
     </Card>
   );
 };
 
 HeroCard.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   extension: PropTypes.string.isRequired,
