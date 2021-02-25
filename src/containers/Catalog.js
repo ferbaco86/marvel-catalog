@@ -13,6 +13,7 @@ const CardsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 padding: 2rem 6.5rem;
+justify-content: center;
 `;
 
 const SearchResults = styled.div`
@@ -26,6 +27,7 @@ border-bottom: 3px solid black;
 const SearchResultsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
+justify-content: center;
 `;
 
 const SearchTitle = styled.h1`
