@@ -28,26 +28,30 @@ const Pic = styled.img`
 border-bottom: 3px solid #ec1d24;
 `;
 
+const Link = styled.a`
+text-decoration: none;`;
+
 const HeroCard = props => {
   const {
-    id, name, image, extension,
+    name, image, extension, url,
   } = props;
 
   return (
     <Card>
-      <a href={`/character/${id}`}>
+      <Link href={url} target="_blank">
         <Pic src={`${image}/${imageSize}.${extension}`} alt={`${name} Portrait`} />
         <Title>{name}</Title>
-      </a>
+      </Link>
     </Card>
   );
 };
 
 HeroCard.propTypes = {
-  id: PropTypes.number.isRequired,
+  // id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   extension: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default HeroCard;

@@ -47,15 +47,47 @@ font-size: 5rem;
 text-align: center;
 z-index: 1`;
 
+const DescriptionContainer = styled.div`
+margin-top: -8rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;`;
+
+// const SeriesEventsContainer = styled.div`
+// margin-top: 2rem;
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;`;
+
+const SubTitle = styled.h3`
+color: #202020;
+padding: 1rem;
+text-transform: uppercase;
+font-family: 'Roboto Condensed', sans-serif;
+line-spacing: 1px;
+font-size: 2rem;
+text-align: center;`;
+
 const Description = styled.p`
 font-size: 1.2rem;
-color: #202020`;
+color: #202020;
+padding: 3rem;
+text-align: center;`;
 
 const CharInfo = props => {
   const {
     name, image, extension, description,
   } = props;
 
+  let descriptionText = '';
+
+  if (description === '') {
+    descriptionText = 'No description provided';
+  } else {
+    descriptionText = description;
+  }
   return (
     <Container>
       <CoverImageContainer>
@@ -63,7 +95,10 @@ const CharInfo = props => {
           <Title>{name}</Title>
         </CoverImage>
       </CoverImageContainer>
-      <Description>{description}</Description>
+      <DescriptionContainer>
+        <SubTitle>Description</SubTitle>
+        <Description>{descriptionText}</Description>
+      </DescriptionContainer>
     </Container>
   );
 };
