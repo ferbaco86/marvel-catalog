@@ -1,4 +1,5 @@
 import Catalog from '../containers/Catalog';
+import Footer from './Footer';
 import NavBar from './NavBar';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <NavBar />
       <Catalog />
+      <Footer />
     </>
   );
 }
