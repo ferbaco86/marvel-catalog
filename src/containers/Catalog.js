@@ -6,8 +6,9 @@ import Pagination from '../components/Pagination';
 import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
 import ErrorMessage from '../components/ErrorMessage';
-import { incrementOffset, filterByName } from '../actions/index';
+import { incrementOffset, filterByName, filterByEvent } from '../actions/index';
 import CoverImage from '../components/CoverImage';
+import ByEventFilter from '../components/ByEventFilter';
 
 const CardsContainer = styled.div`
 display: flex;
@@ -124,6 +125,11 @@ const Catalog = () => {
     dispatch(filterByName(input, charInfo));
   };
 
+  const filterBySelect = e => {
+    const option = e.target.value;
+    dispatch(filterByEvent(option, charInfo));
+  };
+
   const paginate = pageNumber => {
     setCurrentPage(pageNumber);
     setActive(!isActive);
@@ -138,6 +144,7 @@ const Catalog = () => {
         <SearchBarContainer>
           <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH" />
         </SearchBarContainer>
+        <ByEventFilter filter={filterBySelect} />
         {
           filteredChars && filteredChars.length > 0 && (
             <SearchResults>

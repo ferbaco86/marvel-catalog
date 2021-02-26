@@ -1,4 +1,4 @@
-import { FILTER_BY_NAME } from '../actions/constants';
+import { FILTER_BY_EVENT, FILTER_BY_NAME } from '../actions/constants';
 
 const initialState = {
   filteredChars: [],
@@ -6,12 +6,26 @@ const initialState = {
 
 const filterReducer = (state = initialState, action) => {
   const charData = action.chars;
-  const value = action.name;
+  let value = '';
   let filtered;
   switch (action.type) {
     case FILTER_BY_NAME:
+      value = action.name;
       if (value) {
         filtered = charData.filter(char => char.name.toLowerCase().includes(value));
+      } else {
+        filtered = [];
+      }
+      return {
+        ...state,
+        filteredChars: filtered,
+      };
+    case FILTER_BY_EVENT:
+      value = action.event;
+      if (value) {
+        filtered = charData.filter(char => char.events.items.map(
+          event => event.name,
+        ).includes(value));
       } else {
         filtered = [];
       }

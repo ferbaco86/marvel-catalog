@@ -1,6 +1,6 @@
 import {
   FETCH_DATA_PENDING, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR,
-  INCREMENT_OFFSET, FILTER_BY_NAME, FETCH_CHAR_ID, FETCH_DETAIL_PENDING,
+  INCREMENT_OFFSET, FILTER_BY_NAME, FILTER_BY_EVENT, FETCH_CHAR_ID, FETCH_DETAIL_PENDING,
   FETCH_DETAIL_SUCCESS, FETCH_DETAIL_ERROR, FETCH_SERIES, FETCH_EVENTS,
 } from './constants';
 
@@ -26,6 +26,12 @@ export const incrementOffset = increase => ({
 export const filterByName = (name, chars) => ({
   type: FILTER_BY_NAME,
   name,
+  chars,
+});
+
+export const filterByEvent = (event, chars) => ({
+  type: FILTER_BY_EVENT,
+  event,
   chars,
 });
 
