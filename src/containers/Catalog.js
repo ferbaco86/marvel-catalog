@@ -7,11 +7,13 @@ import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 import { incrementOffset, filterByName } from '../actions/index';
+import CoverImage from '../components/CoverImage';
 
 const CardsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
-padding: 2rem 6.5rem;
+padding: 0 6.5rem;
+margin-top: -5rem;
 justify-content: center;
 `;
 
@@ -52,7 +54,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 100%;
-margin-top: 1.5rem`;
+padding: 1rem;
+margin-bottom: 3rem;`;
 
 const SearchBar = styled.input`
 padding: 0.5rem 1rem 0 1rem;
@@ -117,10 +120,11 @@ const Catalog = () => {
   const errorText = `API Error: ${data.error}`;
   return (
     <>
-      <SearchBarContainer>
-        <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH" />
-      </SearchBarContainer>
+      <CoverImage name="MARVEL CATALOG" imageURL="https://imgur.com/8ti09tn.jpg" subtitle="Browse through more than 1000 Marvel Characters!" />
       <CardsContainer>
+        <SearchBarContainer>
+          <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH" />
+        </SearchBarContainer>
         {
           filteredChars && filteredChars.length > 0 && (
             <SearchResults>
