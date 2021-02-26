@@ -9,6 +9,8 @@ import ErrorMessage from '../components/ErrorMessage';
 import { incrementOffset, filterByName, filterByEvent } from '../actions/index';
 import CoverImage from '../components/CoverImage';
 import ByEventFilter from '../components/ByEventFilter';
+import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 
 const CardsContainer = styled.div`
 display: flex;
@@ -160,6 +162,7 @@ const Catalog = () => {
   const errorText = `API Error: ${data.error}`;
   return (
     <>
+      <NavBar />
       <CoverImage name="MARVEL CATALOG" imageURL="https://imgur.com/8ti09tn.jpg" subtitle="Browse through more than 1000 Marvel Characters!" />
       <CardsContainer>
         <SearchBarContainer>
@@ -208,6 +211,7 @@ const Catalog = () => {
         paginate={paginate}
         currentPage={currentPage}
       />
+      <Footer />
     </>
   );
 };
