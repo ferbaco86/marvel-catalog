@@ -80,16 +80,6 @@ body {
 
 :root {
   --text-color: #f0ebeb;
-  --text-color-dark: #1d1d2c;
-  --highlight-projects-blue: #248d92;
-  --highlight-projects-red: #e40c2b;
-  --highlight-projects-yellow: #eba63f;
-  --highlight-projects-alt: #438945;
-  --border-nav: #d01c1f;
-  --bg-color-dark: #202020;
-  --bg-color-med-dark: #161b33;
-  --bg-color-light-dark: #474973;
-  --bg-color-light:#6f557e;
   --bg-color-lighter: #fff;
 }
 

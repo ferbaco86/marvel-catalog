@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import HeroCard from '../components/HeroCard';
 import Pagination from '../components/Pagination';
-import NavBar from '../components/NavBar';
 import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
 import ErrorMessage from '../components/ErrorMessage';
@@ -74,6 +73,7 @@ border-bottom: 3px solid black;
 const Catalog = () => {
   const { data, offset, filter } = useSelector(state => state);
   const [currentPage, setCurrentPage] = useState(1);
+  const [isActive, setActive] = useState(false);
   const [charsPerPage] = useState(56);
   const dispatch = useDispatch();
 
@@ -97,10 +97,11 @@ const Catalog = () => {
   };
 
   const charInfo = data.data;
+  const sortedCharInfo = charInfo.sort((a, b) => a.name.localeCompare(b.name));
   const { filteredChars } = filter;
   const indexOfLastChar = currentPage * charsPerPage;
   const indexOfFirstChar = indexOfLastChar - charsPerPage;
-  const currentChars = charInfo.slice(indexOfFirstChar, indexOfLastChar);
+  const currentChars = sortedCharInfo.slice(indexOfFirstChar, indexOfLastChar);
 
   const filterByInput = e => {
     const input = e.target.value;
@@ -109,13 +110,13 @@ const Catalog = () => {
 
   const paginate = pageNumber => {
     setCurrentPage(pageNumber);
+    setActive(!isActive);
   };
 
   if (shouldComponentRender()) return <LoaderSpinner />;
   const errorText = `API Error: ${data.error}`;
   return (
     <>
-      <NavBar />
       <SearchBarContainer>
         <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH" />
       </SearchBarContainer>
@@ -153,7 +154,12 @@ const Catalog = () => {
           />
         ))}
       </CardsContainer>
-      <Pagination charsPerPage={charsPerPage} totalChars={charInfo.length} paginate={paginate} />
+      <Pagination
+        charsPerPage={charsPerPage}
+        totalChars={charInfo.length}
+        paginate={paginate}
+        currentPage={currentPage}
+      />
     </>
   );
 };

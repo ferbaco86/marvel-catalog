@@ -9,6 +9,7 @@ import CharInfo from '../components/CharInfo';
 import NavBar from '../components/NavBar';
 import SeriesEventsInfo from '../components/SeriesEventsInfo';
 import HeroCard from '../components/HeroCard';
+import ErrorMessage from '../components/ErrorMessage';
 
 const Container = styled.div`
 display: flex;
@@ -47,10 +48,15 @@ const CharDetail = props => {
 
   if (shouldComponentRender()) return <LoaderSpinner />;
 
+  const errorText = `API Error: ${detail.error}`;
+
   return (
     <>
       <NavBar />
       <Container>
+        {detail.error && (
+        <ErrorMessage message={errorText} />
+        )}
         { detail.id && (detail.detail.map(char => (
           <>
             <CharInfo

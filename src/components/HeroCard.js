@@ -25,7 +25,7 @@ font-weight: 700;
 text-align: center;`;
 
 const Pic = styled.img`
-border-bottom: 3px solid #ec1d24;
+border-bottom: 5px solid #ec1d24;
 `;
 
 const Link = styled.a`
