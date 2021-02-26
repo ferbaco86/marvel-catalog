@@ -62,10 +62,14 @@ const CoverImage = props => {
   );
 };
 
+CoverImage.defaultProps = {
+  subtitle: '',
+};
+
 CoverImage.propTypes = {
   name: PropTypes.string.isRequired,
   imageURL: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
 };
 
 export default CoverImage;

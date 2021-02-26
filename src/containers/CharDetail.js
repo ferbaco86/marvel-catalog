@@ -57,16 +57,16 @@ const CharDetail = props => {
         {detail.error && (
         <ErrorMessage message={errorText} />
         )}
-        { detail.id && (detail.detail.map(char => (
+        { detail.id && (
           <>
             <CharInfo
-              key={char.id}
-              id={char.id}
-              name={char.name}
-              description={char.description}
-              image={char.thumbnail.path}
-              extension={char.thumbnail.extension}
-              url={char.urls[0].url}
+              key={detail.detail[0].id}
+              id={detail.detail[0].id}
+              name={detail.detail[0].name}
+              description={detail.detail[0].description}
+              image={detail.detail[0].thumbnail.path}
+              extension={detail.detail[0].thumbnail.extension}
+              url={detail.detail[0].urls[0].url}
             />
             <SeriesEventsInfo title="Latest Series" />
             <SeriesEventsContainer>
@@ -93,13 +93,15 @@ const CharDetail = props => {
               ))}
             </SeriesEventsContainer>
           </>
-        )))}
+        )}
       </Container>
     </>
   );
 };
 CharDetail.propTypes = {
-  match: PropTypes.number.isRequired,
+  match: PropTypes.shape(
+    { params: PropTypes.shape({ id: PropTypes.string.isRequired }).isRequired },
+  ).isRequired,
 };
 
 export default CharDetail;
