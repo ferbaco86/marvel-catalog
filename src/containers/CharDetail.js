@@ -10,6 +10,7 @@ import NavBar from '../components/NavBar';
 import SeriesEventsInfo from '../components/SeriesEventsInfo';
 import HeroCard from '../components/HeroCard';
 import ErrorMessage from '../components/ErrorMessage';
+import Footer from '../components/Footer';
 
 const Container = styled.div`
 display: flex;
@@ -57,7 +58,7 @@ const CharDetail = props => {
         {detail.error && (
         <ErrorMessage message={errorText} />
         )}
-        { detail.id && (
+        { detail.detail[0] && (
           <>
             <CharInfo
               key={detail.detail[0].id}
@@ -95,6 +96,7 @@ const CharDetail = props => {
           </>
         )}
       </Container>
+      <Footer />
     </>
   );
 };

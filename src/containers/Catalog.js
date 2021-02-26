@@ -29,6 +29,7 @@ const SearchResultsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+margin-bottom: 6.5rem;
 `;
 
 const SearchTitle = styled.h1`
