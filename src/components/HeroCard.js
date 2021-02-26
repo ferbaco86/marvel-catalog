@@ -38,7 +38,7 @@ const HeroCard = props => {
 
   return (
     <Card>
-      <Link href={url} target="_blank">
+      <Link href={url}>
         <Pic src={`${image}/${imageSize}.${extension}`} alt={`${name} Portrait`} />
         <Title>{name}</Title>
       </Link>

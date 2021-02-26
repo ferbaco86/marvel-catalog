@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-// import HeroCard from './HeroCard';
 
 const SeriesEventsContainer = styled.div`
 margin-top: 2rem;
@@ -18,10 +17,6 @@ font-family: 'Roboto Condensed', sans-serif;
 line-spacing: 1px;
 font-size: 2rem;
 text-align: center;`;
-
-// const {
-//   name, image, extension,
-// } = props;
 
 const SeriesEventsInfo = props => {
   const {
@@ -40,10 +35,6 @@ const SeriesEventsInfo = props => {
 
 SeriesEventsInfo.propTypes = {
   title: PropTypes.string.isRequired,
-  //   // id: PropTypes.number.isRequired,
-  // name: PropTypes.string.isRequired,
-  // image: PropTypes.string.isRequired,
-  // extension: PropTypes.string.isRequired,
 };
 
 export default SeriesEventsInfo;

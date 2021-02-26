@@ -13,9 +13,9 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 const fetchCharDetail = () => dispatch => {
   let charID = 0;
   if (store.getState().detail.id) { charID = store.getState().detail.id; }
-  const apiUrl = `https://gateway.marvel.com:443/v1/public/characters/${charID}?apikey=${API_KEY}}`;
-  const seriesApiUrl = `https://gateway.marvel.com:443/v1/public/characters/${charID}/series?orderBy=-startYear&limit=5&apikey=${API_KEY}`;
-  const eventsApiUrl = `https://gateway.marvel.com:443/v1/public/characters/${charID}/events?orderBy=-startDate&limit=5&apikey=${API_KEY}`;
+  const apiUrl = `https://gateway.marvel.com:443/v1/public/characters/${charID}?apikey=${API_KEY}`;
+  const seriesApiUrl = `https://gateway.marvel.com:443/v1/public/characters/${charID}/series?orderBy=-startYear&limit=4&apikey=${API_KEY}`;
+  const eventsApiUrl = `https://gateway.marvel.com:443/v1/public/characters/${charID}/events?orderBy=-startDate&limit=4&apikey=${API_KEY}`;
 
   dispatch(fetchDetailPending());
   fetch(apiUrl, config)

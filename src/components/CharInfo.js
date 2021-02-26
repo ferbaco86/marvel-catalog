@@ -54,13 +54,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;`;
 
-// const SeriesEventsContainer = styled.div`
-// margin-top: 2rem;
-// display: flex;
-// flex-direction: column;
-// justify-content: center;
-// align-items: center;`;
-
 const SubTitle = styled.h3`
 color: #202020;
 padding: 1rem;
@@ -76,9 +69,14 @@ color: #202020;
 padding: 3rem;
 text-align: center;`;
 
+const MoreInfoLink = styled.a`
+font-size: 1.3rem;
+text-decoration: underline;
+color: #ec1d24`;
+
 const CharInfo = props => {
   const {
-    name, image, extension, description,
+    name, image, extension, description, url,
   } = props;
 
   let descriptionText = '';
@@ -98,17 +96,18 @@ const CharInfo = props => {
       <DescriptionContainer>
         <SubTitle>Description</SubTitle>
         <Description>{descriptionText}</Description>
+        <MoreInfoLink href={url} target="_blank">More Info</MoreInfoLink>
       </DescriptionContainer>
     </Container>
   );
 };
 
 CharInfo.propTypes = {
-  // id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   extension: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 export default CharInfo;

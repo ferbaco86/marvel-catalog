@@ -10,18 +10,16 @@ import NavBar from '../components/NavBar';
 import SeriesEventsInfo from '../components/SeriesEventsInfo';
 import HeroCard from '../components/HeroCard';
 
-// const WebDisplay = styled.iframe`
-// width: 500px;
-// height: 500px;`;
-
 const Container = styled.div`
 display: flex;
 flex-direction: column;
-padding: 5rem;`;
+`;
 
-const SeriesContainer = styled.div`
+const SeriesEventsContainer = styled.div`
 display: flex;
-flex-wrap: wrap;`;
+flex-wrap: wrap;
+justify-content: center;
+padding: 0 6.5rem;`;
 
 const CharDetail = props => {
   const { match } = props;
@@ -62,23 +60,33 @@ const CharDetail = props => {
               description={char.description}
               image={char.thumbnail.path}
               extension={char.thumbnail.extension}
+              url={char.urls[0].url}
             />
             <SeriesEventsInfo title="Latest Series" />
-            <SeriesContainer>
+            <SeriesEventsContainer>
               { detail.series.map(serie => (
                 <HeroCard
                   key={serie.id}
                   name={serie.title}
                   image={serie.thumbnail.path}
                   extension={serie.thumbnail.extension}
-                  url="https://www.google.cl"
+                  url={serie.urls[0].url}
                 />
               ))}
-            </SeriesContainer>
+            </SeriesEventsContainer>
             <SeriesEventsInfo title="Latest Events" />
-
+            <SeriesEventsContainer>
+              { detail.events.map(event => (
+                <HeroCard
+                  key={event.id}
+                  name={event.title}
+                  image={event.thumbnail.path}
+                  extension={event.thumbnail.extension}
+                  url={event.urls[0].url}
+                />
+              ))}
+            </SeriesEventsContainer>
           </>
-        // <WebDisplay title={char.name} src={char.urls[0].url} sandbox="" />
         )))}
       </Container>
     </>
