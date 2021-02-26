@@ -15,6 +15,12 @@ flex-wrap: wrap;
 padding: 0 6.5rem;
 margin-top: -5rem;
 justify-content: center;
+@media screen and (max-width: 1200px) {
+  padding: 4rem;
+}
+@media screen and (max-width: 800px) {
+  flex-direction: column;
+}
 `;
 
 const SearchResults = styled.div`
@@ -30,7 +36,10 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 margin-bottom: 6.5rem;
-`;
+@media screen and (max-width: 800px) {
+  flex-direction: column;
+  width: 100%;
+}`;
 
 const SearchTitle = styled.h1`
 font-size: 2rem;
@@ -72,6 +81,9 @@ border-bottom: 3px solid black;
 :-ms-input-placeholder {
    color: lightgray;
 }
+@media screen and (max-width: 800px) {
+  width: 100%;
+  }
 `;
 
 const Catalog = () => {

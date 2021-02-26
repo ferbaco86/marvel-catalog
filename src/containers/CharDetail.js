@@ -21,7 +21,10 @@ const SeriesEventsContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
-padding: 0 6.5rem;`;
+padding: 0 6.5rem;
+@media screen and (max-width: 800px) {
+  flex-direction: column;
+  }`;
 
 const CharDetail = props => {
   const { match } = props;

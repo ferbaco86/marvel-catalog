@@ -7,7 +7,8 @@ flex-direction: column;
 padding: 1rem 6.5rem 0.3rem 6.5rem;
 align-items: center;
 justify-content: center;
-background-color: #202020;`;
+background-color: #202020;
+text-align: center`;
 
 const StyledLink = styled.a`
 text-decoration: none;

@@ -15,21 +15,41 @@ cursor: pointer;
 &:hover {
   transform: scale(1.05);
   transition: all .2s linear;
-  }`;
+  }
+@media screen and (max-width: 1200px) {
+    flex: 0 0 30%;
+  }
+@media screen and (max-width: 800px) {
+  width: 100%;
+  align-self: center;
+  }
+}`;
 
 const Title = styled.h1`
 color: white;
 padding: 1rem;
 font-family: 'Roboto Condensed', sans-serif;
 font-weight: 700;
-text-align: center;`;
+text-align: center;
+
+@media screen and (max-width: 800px) {
+  width: min-content;
+  text-align: center;
+  margin: 0 auto;
+  }`;
 
 const Pic = styled.img`
 border-bottom: 5px solid #ec1d24;
+@media screen and (max-width: 800px) {
+  width: 100%;
+  }
 `;
 
 const Link = styled.a`
-text-decoration: none;`;
+text-decoration: none;
+@media screen and (max-width: 800px) {
+  width: 100%;
+  }`;
 
 const HeroCard = props => {
   const {
