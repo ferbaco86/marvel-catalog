@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Select = styled.select`
-border: 3px solid #bbb;
+border: none;
+padding-top: 0.5rem;
+border-bottom: 3px solid black;
 `;
 
 const ByEventFilter = props => {

@@ -63,10 +63,13 @@ font-weight: 700;`;
 const SearchBarContainer = styled.div`
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
 width: 100%;
 padding: 1rem;
-margin-bottom: 3rem;`;
+margin-bottom: 3rem;
+@media screen and (max-width: 800px) {
+  flex-direction: column;
+  }`;
 
 const SearchBar = styled.input`
 padding: 0.5rem 1rem 0 1rem;
@@ -86,6 +89,24 @@ border-bottom: 3px solid black;
   width: 100%;
   }
 `;
+
+const FilterContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+@media screen and (max-width: 800px) {
+  flex-direction: column;
+  margin-top: 3rem;
+  }`;
+
+const FilterText = styled.span`
+font-size: 1rem;
+color: #202020;
+margin-right: 2rem;
+@media screen and (max-width: 800px) {
+  margin-right: 0;
+  margin-bottom: 3rem;
+  }`;
 
 const Catalog = () => {
   const { data, offset, filter } = useSelector(state => state);
@@ -143,8 +164,11 @@ const Catalog = () => {
       <CardsContainer>
         <SearchBarContainer>
           <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH" />
+          <FilterContainer>
+            <FilterText>Filter by Event</FilterText>
+            <ByEventFilter filter={filterBySelect} />
+          </FilterContainer>
         </SearchBarContainer>
-        <ByEventFilter filter={filterBySelect} />
         {
           filteredChars && filteredChars.length > 0 && (
             <SearchResults>
