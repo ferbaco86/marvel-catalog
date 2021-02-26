@@ -41,7 +41,10 @@ padding: 1rem;
 font-family: 'Roboto Condensed', sans-serif;
 font-weight: 700;
 font-size: 5rem;
-z-index: 1`;
+z-index: 1;
+@media screen and (max-width: 800px) {
+ font-size: 4rem;
+  }`;
 
 const SubTitle = styled.h3`
 color: white;

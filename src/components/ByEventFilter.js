@@ -10,7 +10,8 @@ border-bottom: 3px solid black;
 
 const ByEventFilter = props => {
   const { filter } = props;
-  const EVENTS = ['All', 'Secret Wars', 'Civil War', 'Spider-Verse', 'Onslaught', 'Mutant Massacre', 'House of M', 'Avengers VS X-Men', 'Secret Invasion', 'Fear Itself', 'Infinity'];
+  const EVENTS = ['All', 'Secret Wars', 'Civil War', 'Spider-Verse', 'Onslaught', 'Mutant Massacre', 'House of M',
+    'Avengers VS X-Men', 'Secret Invasion', 'Fear Itself', 'Infinity', 'Secret Empire', 'Original Sin'];
   return (
     <Select onChange={e => filter(e)}>
       {EVENTS.map(event => (

@@ -83,3 +83,14 @@ body {
   --bg-color-lighter: #fff;
 }
 
+@media (max-width: 800px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  html,
+  body {
+    overflow-y: scroll;
+  }
+}
