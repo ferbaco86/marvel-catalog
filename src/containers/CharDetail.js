@@ -8,9 +8,9 @@ import LoaderSpinner from '../components/LoaderSpinner';
 import CharInfo from '../components/CharInfo';
 import NavBar from '../components/NavBar';
 import SeriesEventsInfo from '../components/SeriesEventsInfo';
-import HeroCard from '../components/HeroCard';
 import ErrorMessage from '../components/ErrorMessage';
 import Footer from '../components/Footer';
+import SeriesEventsCard from '../components/SeriesEventsCard';
 
 const Container = styled.div`
 display: flex;
@@ -75,7 +75,7 @@ const CharDetail = props => {
             <SeriesEventsInfo title="Latest Series" />
             <SeriesEventsContainer>
               { detail.series.map(serie => (
-                <HeroCard
+                <SeriesEventsCard
                   key={serie.id}
                   name={serie.title}
                   image={serie.thumbnail.path}
@@ -87,7 +87,7 @@ const CharDetail = props => {
             <SeriesEventsInfo title="Latest Events" />
             <SeriesEventsContainer>
               { detail.events.map(event => (
-                <HeroCard
+                <SeriesEventsCard
                   key={event.id}
                   name={event.title}
                   image={event.thumbnail.path}

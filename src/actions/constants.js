@@ -10,3 +10,4 @@ export const FETCH_DETAIL_ERROR = 'FETCH_DETAIL_ERROR';
 export const FETCH_SERIES = 'FETCH_SERIES';
 export const FETCH_EVENTS = 'FETCH_EVENTS';
 export const FILTER_BY_EVENT = 'FILTER_BY_EVENT';
+export const RESET_FILTER = 'RESET_FILTER';

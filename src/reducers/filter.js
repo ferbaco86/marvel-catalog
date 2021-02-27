@@ -1,4 +1,4 @@
-import { FILTER_BY_EVENT, FILTER_BY_NAME } from '../actions/constants';
+import { FILTER_BY_EVENT, FILTER_BY_NAME, RESET_FILTER } from '../actions/constants';
 
 const initialState = {
   filteredChars: [],
@@ -32,6 +32,11 @@ const filterReducer = (state = initialState, action) => {
       return {
         ...state,
         filteredChars: filtered,
+      };
+    case RESET_FILTER:
+      return {
+        ...state,
+        filteredChars: [],
       };
     default: return state;
   }

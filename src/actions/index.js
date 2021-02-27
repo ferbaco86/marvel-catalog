@@ -1,7 +1,7 @@
 import {
   FETCH_DATA_PENDING, FETCH_DATA_SUCCESS, FETCH_DATA_ERROR,
   INCREMENT_OFFSET, FILTER_BY_NAME, FILTER_BY_EVENT, FETCH_CHAR_ID, FETCH_DETAIL_PENDING,
-  FETCH_DETAIL_SUCCESS, FETCH_DETAIL_ERROR, FETCH_SERIES, FETCH_EVENTS,
+  FETCH_DETAIL_SUCCESS, FETCH_DETAIL_ERROR, FETCH_SERIES, FETCH_EVENTS, RESET_FILTER,
 } from './constants';
 
 export const fetchDataPending = () => ({
@@ -33,6 +33,10 @@ export const filterByEvent = (event, chars) => ({
   type: FILTER_BY_EVENT,
   event,
   chars,
+});
+
+export const resetFilter = () => ({
+  type: RESET_FILTER,
 });
 
 export const fetchCharID = id => ({

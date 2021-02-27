@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 
 const imageSize = 'portrait_uncanny';
 
@@ -46,20 +46,20 @@ border-bottom: 5px solid #ec1d24;
   }
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
 text-decoration: none;
 @media screen and (max-width: 800px) {
   width: 100%;
   }`;
 
-const HeroCard = props => {
+const SeriesEventsCard = props => {
   const {
     name, image, extension, url,
   } = props;
 
   return (
     <Card>
-      <StyledLink to={url}>
+      <StyledLink href={url}>
         <Pic src={`${image}/${imageSize}.${extension}`} alt={`${name} Portrait`} />
         <Title>{name}</Title>
       </StyledLink>
@@ -67,11 +67,11 @@ const HeroCard = props => {
   );
 };
 
-HeroCard.propTypes = {
+SeriesEventsCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   extension: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
 
-export default HeroCard;
+export default SeriesEventsCard;

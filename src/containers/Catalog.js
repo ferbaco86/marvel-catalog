@@ -6,11 +6,15 @@ import Pagination from '../components/Pagination';
 import fetchData from '../api/fetchData';
 import LoaderSpinner from '../components/LoaderSpinner';
 import ErrorMessage from '../components/ErrorMessage';
-import { incrementOffset, filterByName, filterByEvent } from '../actions/index';
+import {
+  incrementOffset, filterByName, filterByEvent,
+  resetFilter,
+} from '../actions/index';
 import CoverImage from '../components/CoverImage';
 import ByEventFilter from '../components/ByEventFilter';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import store from '../reducers/index';
 
 const CardsContainer = styled.div`
 display: flex;
@@ -116,15 +120,21 @@ const Catalog = () => {
   const [isActive, setActive] = useState(false);
   const [charsPerPage] = useState(56);
   const dispatch = useDispatch();
-
+  const { filteredChars } = filter;
   const increaseOffset = () => {
     if (offset.offset < 1500) dispatch(incrementOffset(100));
   };
 
   useEffect(() => {
-    dispatch(fetchData());
-    increaseOffset();
+    if (store.getState().data.data.length === 0) {
+      dispatch(fetchData());
+      increaseOffset();
+    }
   }, [offset]);
+
+  useEffect(() => {
+    dispatch(resetFilter());
+  }, []);
 
   const shouldComponentRender = () => {
     let isPending = false;
@@ -138,7 +148,6 @@ const Catalog = () => {
 
   const charInfo = data.data;
   const sortedCharInfo = charInfo.sort((a, b) => a.name.localeCompare(b.name));
-  const { filteredChars } = filter;
   const indexOfLastChar = currentPage * charsPerPage;
   const indexOfFirstChar = indexOfLastChar - charsPerPage;
   const currentChars = sortedCharInfo.slice(indexOfFirstChar, indexOfLastChar);
@@ -166,7 +175,7 @@ const Catalog = () => {
       <CoverImage name="MARVEL CATALOG" imageURL="https://imgur.com/8ti09tn.jpg" subtitle="Browse through more than 1000 Marvel Characters!" />
       <CardsContainer>
         <SearchBarContainer>
-          <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH" />
+          <SearchBar onChange={e => { filterByInput(e); }} type="text" placeholder="SEARCH BY NAME" />
           <FilterContainer>
             <FilterText>Filter by Event</FilterText>
             <ByEventFilter filter={filterBySelect} />
