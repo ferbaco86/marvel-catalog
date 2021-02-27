@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ dSDVZk"
+>
+  <span
+    className="sc-gsTCUz eDDWpT"
+  >
+     
+    Error!
+     
+  </span>
+</div>
+`;

@@ -1,0 +1,558 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display renders correctly 1`] = `
+<ul
+  className="sc-bdfBwQ ePfeBh"
+>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      1
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz iGlfJZ"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      2
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      3
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      4
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      5
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      6
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      7
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      8
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      9
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      10
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      11
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      12
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      13
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      14
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      15
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      16
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      17
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      18
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      19
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      20
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      21
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      22
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      23
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      24
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      25
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      26
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      27
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      28
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      29
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      30
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      31
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      32
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      33
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      34
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      35
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      36
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      37
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      38
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      39
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      40
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      41
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      42
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      43
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      44
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      45
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      46
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      47
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      48
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      49
+    </button>
+  </li>
+  <li
+    className="sc-gsTCUz dSoyXp"
+  >
+    <button
+      className="sc-dlfnbm jYKKPb"
+      onClick={[Function]}
+      type="button"
+    >
+      50
+    </button>
+  </li>
+</ul>
+`;

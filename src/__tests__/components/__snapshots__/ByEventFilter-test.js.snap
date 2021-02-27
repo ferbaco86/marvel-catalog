@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display renders correctly 1`] = `
+<select
+  className="sc-bdfBwQ jKvFWK"
+  onChange={[Function]}
+>
+  <option>
+    All
+  </option>
+  <option>
+    Secret Wars
+  </option>
+  <option>
+    Civil War
+  </option>
+  <option>
+    Spider-Verse
+  </option>
+  <option>
+    Onslaught
+  </option>
+  <option>
+    Mutant Massacre
+  </option>
+  <option>
+    House of M
+  </option>
+  <option>
+    Avengers VS X-Men
+  </option>
+  <option>
+    Secret Invasion
+  </option>
+  <option>
+    Fear Itself
+  </option>
+  <option>
+    Infinity
+  </option>
+  <option>
+    Secret Empire
+  </option>
+  <option>
+    Original Sin
+  </option>
+</select>
+`;

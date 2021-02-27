@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ hNRTSc"
+>
+  <div
+    alt="Doctor Strange Cover"
+    className="sc-gsTCUz eKsquj"
+  >
+    <h1
+      className="sc-dlfnbm AgPsk"
+    >
+      Doctor Strange
+    </h1>
+    <h3
+      className="sc-hKgILt hOQUZQ"
+    >
+      Multiverse Madness
+    </h3>
+  </div>
+</div>
+`;
