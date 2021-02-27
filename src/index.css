@@ -69,7 +69,7 @@ select {
   font: inherit;
 }
 
-html { 
+html {
   overflow-x: hidden;
 }
 
@@ -84,7 +84,6 @@ body {
 }
 
 @media (max-width: 800px) {
-
   body {
     overflow-x: hidden;
   }
