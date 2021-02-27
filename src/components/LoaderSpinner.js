@@ -27,6 +27,7 @@ const Spinner = styled.div`
   }`;
 const LoaderSpinner = () => (
   <SpinnerContainer>
+    LOADING
     <Spinner />
   </SpinnerContainer>
 );
