@@ -1,10 +1,39 @@
-# Getting Started with Create React App
+# Marvel Characters Catalog
+A catalog of Marvel characters created with React/Redux and the Marvel API. You can browse through more than 1000 marvel characters, search by name, or filter them by some of Marvel's important events. For each character, you can get a short description, latest series, and events. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshots
+![marvelCatalog](https://user-images.githubusercontent.com/52765379/109394749-52740800-7907-11eb-9de8-3df83f29d387.gif)
 
-## Available Scripts
+## Live Version
 
-In the project directory, you can run:
+https://fbc-marvel-catalog.herokuapp.com/
+
+## Running the project
+
+To get a local copy use this command on your terminal:
+
+### `git clone git@github.com:ferbaco86/marvel-catalog.git`
+
+## Adding Keys
+
+### Marvel API 
+
+- Create a ```.env``` file on the root of your project and add your own Marvel public API key to the file. You can request one here [MARVEL API](https://developer.marvel.com/)
+
+```
+
+REACT_APP_API_KEY = WRITE YOUR PUBLIC MARVEL API KEY HERE
+
+```
+
+- Add your domain to your authorized referrers in your Marvel Developer Account
+
+
+Then run
+
+### `npm install`
+
+Now in the project directory, you can run:
 
 ### `npm start`
 
@@ -14,11 +43,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -27,44 +51,29 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm test`
 
-### `npm run eject`
+Run the tests included in the project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technologies Used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React.js
+- Redux
+- HTML
+- CSS
+- Create-React-App
+- Marvel API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Potential Features
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Add more events to the filter dropdown
 
-## Learn More
+* Include more information on the character webpage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Fernando Bahamondes**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Github: [@ferbaco86](https://github.com/ferbaco86)
+- Twitter: [@ferbac0](https://twitter.com/ferbac0)
+- LinkedIn: [fernando-bahamondes](https://www.linkedin.com/in/fernando-bahamondes-correa)
