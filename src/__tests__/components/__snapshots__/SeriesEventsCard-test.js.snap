@@ -6,18 +6,17 @@ exports[`Display renders correctly 1`] = `
 >
   <a
     className="sc-hKgILt bWnvia"
-    href="/www.mockurl2.com"
-    onClick={[Function]}
+    href="www.mockurl2.com"
   >
     <img
-      alt="Blade Portrait"
+      alt="Peter Parker Portrait"
       className="sc-dlfnbm ckVWtK"
       src="www.mockurl.com/portrait_uncanny.jpg"
     />
     <h1
       className="sc-gsTCUz kqqFgO"
     >
-      Blade
+      Peter Parker
     </h1>
   </a>
 </div>

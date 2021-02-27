@@ -1,6 +1,7 @@
 import {
   FILTER_BY_EVENT,
   FILTER_BY_NAME,
+  RESET_FILTER,
 } from '../../actions/constants';
 import filterReducer from '../../reducers/filter';
 
@@ -10,6 +11,15 @@ describe('Filter Reducer', () => {
       filteredChars: [],
     };
     const mockAction = { type: null };
+    const state = filterReducer(mockState, mockAction);
+    expect(state).toStrictEqual({ filteredChars: [] });
+  });
+
+  it('Reset the filter state', () => {
+    const mockState = {
+      filteredChars: ['Rogue', 'Venom'],
+    };
+    const mockAction = { type: RESET_FILTER };
     const state = filterReducer(mockState, mockAction);
     expect(state).toStrictEqual({ filteredChars: [] });
   });
