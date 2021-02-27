@@ -10,7 +10,7 @@ const filterReducer = (state = initialState, action) => {
   let filtered;
   switch (action.type) {
     case FILTER_BY_NAME:
-      value = action.name;
+      value = action.name.toLowerCase();
       if (value) {
         filtered = charData.filter(char => char.name.toLowerCase().includes(value));
       } else {

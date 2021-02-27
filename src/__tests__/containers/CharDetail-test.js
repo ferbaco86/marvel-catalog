@@ -25,7 +25,7 @@ describe('Display', () => {
     const snap = renderer.create(
       <BrowserRouter>
         <Provider store={store}>
-          <CharDetail />
+          <CharDetail match={{ params: { id: '2' } }}/>
         </Provider>
       </BrowserRouter>,
     ).toJSON();
