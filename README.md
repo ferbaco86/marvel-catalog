@@ -80,4 +80,4 @@ Run the tests included in the project
 
 ## Acknowledgements
 
-[Marvel](https://www.marvel.com/) for providing all the information and awesome characters
+[MARVEL](https://www.marvel.com/) for providing all the information and awesome characters
