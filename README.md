@@ -77,3 +77,7 @@ Run the tests included in the project
 - Github: [@ferbaco86](https://github.com/ferbaco86)
 - Twitter: [@ferbac0](https://twitter.com/ferbac0)
 - LinkedIn: [fernando-bahamondes](https://www.linkedin.com/in/fernando-bahamondes-correa)
+
+## Acknowledgements
+
+[Marvel](https://www.marvel.com/) for providing all the information and awesome characters
