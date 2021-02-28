@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display renders correctly 1`] = `
+<div
+  className="sc-bdfBwQ iEmcFJ"
+>
+  <a
+    className="sc-hKgILt bWnvia"
+    href="/www.mockurl2.com"
+    onClick={[Function]}
+  >
+    <img
+      alt="Blade Portrait"
+      className="sc-dlfnbm ckVWtK"
+      src="www.mockurl.com/portrait_uncanny.jpg"
+    />
+    <h1
+      className="sc-gsTCUz kqqFgO"
+    >
+      Blade
+    </h1>
+  </a>
+</div>
+`;

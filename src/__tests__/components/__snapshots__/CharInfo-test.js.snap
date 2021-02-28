@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display renders correctly 1`] = `
+<div
+  className="sc-eCssSg gxNdKZ"
+>
+  <div
+    className="sc-bdfBwQ hNRTSc"
+  >
+    <div
+      alt="Spider-Man Cover"
+      className="sc-gsTCUz fMlBTs"
+    >
+      <h1
+        className="sc-dlfnbm AgPsk"
+      >
+        Spider-Man
+      </h1>
+      <h3
+        className="sc-hKgILt hOQUZQ"
+      >
+        
+      </h3>
+    </div>
+  </div>
+  <div
+    className="sc-jSgupP brJnBv"
+  >
+    <h3
+      className="sc-gKsewC jkmbiG"
+    >
+      Description
+    </h3>
+    <p
+      className="sc-iBPRYJ cgYlZU"
+    >
+      Super Hero
+    </p>
+    <a
+      className="sc-fubCfw dbIUh"
+      href="www.mockurl2.com"
+      target="_blank"
+    >
+      More Info
+    </a>
+  </div>
+</div>
+`;
