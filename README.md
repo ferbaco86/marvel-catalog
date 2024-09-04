@@ -6,7 +6,7 @@ A catalog of Marvel characters created with React/Redux and the Marvel API. You 
 
 ## Live Version
 
-https://fbc-marvel-catalog.herokuapp.com/
+https://fbc-marvel-catalog.netlify.app/
 
 ## Running the project
 
